@@ -1,5 +1,5 @@
 package productorConsumidor;
-
+//http://www.sc.ehu.es/sbweb/fisica/cursoJava/applets/threads/sincronizacion.htm
 public class ProducerConsumerTest {
    public static void main(String[] args) {
       CubbyHole c = new CubbyHole();
@@ -9,6 +9,14 @@ public class ProducerConsumerTest {
       c1.start();
    }
 }
+
+/*La palabra reservada synchronized se usa para indicar que ciertas partes del código, 
+ * (habitualmente, una función miembro) están sincronizadas, es decir, 
+ * que solamente un subproceso puede acceder a dicho método a la vez.
+ * Cada método sincronizado posee una especie de llave que puede cerrar o abrir la puerta de acceso. 
+ * Cuando un subproceso intenta acceder al método sincronizado mirará a ver si la llave está echada, 
+ * en cuyo caso no podrá accederlo. Si método no tiene puesta la llave entonces el 
+ * subproceso puede acceder a dicho código sincronizado. */
 
 class CubbyHole {
    private int contents;

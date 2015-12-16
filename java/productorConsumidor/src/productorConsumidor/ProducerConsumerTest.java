@@ -79,12 +79,14 @@ class Producer extends Thread {
 	
 	public void run() {
 		for (int i = 0; i < 10; i++) {
-		cubbyhole.put(i);
-		System.out.println("Producer #" + this.number	+ " put: " + i);
-		try {
-			sleep((int)(Math.random() * 100));
-		} 
-			catch (InterruptedException e) { }
+			cubbyhole.put(i);
+			System.out.println("Producer #" + this.number	+ " put: " + i);
+			try {
+				sleep((int)(Math.random() * 100));
+			} 
+				catch (InterruptedException e) { 
+					
+			}
 		}
 	}
 }
